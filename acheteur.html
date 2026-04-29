@@ -346,10 +346,10 @@ footer img{height:22px;object-fit:contain;opacity:0.75}
       <div class="pill-group"><label class="pill"><input type="radio" name="r_type" checked value="Condo"><span class="pd"></span>Condo</label><label class="pill"><input type="radio" name="r_type"  value="Maison"><span class="pd"></span>Maison</label><label class="pill"><input type="radio" name="r_type"  value="Jumele"><span class="pd"></span>Jumelé</label><label class="pill"><input type="radio" name="r_type"  value="Duplex/Triplex"><span class="pd"></span>Duplex/Triplex</label><label class="pill"><input type="radio" name="r_type"  value="Peu importe"><span class="pd"></span>Peu importe</label></div>
     </div>
     <div class="fg"><label class="lbl">Budget minimum</label>
-      <select><option>— de 300k $</option><option>300 000 $</option><option>350 000 $</option><option>400 000 $</option><option selected>450 000 $</option><option>500 000 $</option><option>600 000 $</option><option>700 000 $</option><option>800 000 $</option><option>1 000 000 $</option></select>
+      <select id="f_budg_min"><option value="Moins de 300k">— de 300k $</option><option value="300 000">300 000 $</option><option value="350 000">350 000 $</option><option value="400 000">400 000 $</option><option value="450 000" selected>450 000 $</option><option value="500 000">500 000 $</option><option value="600 000">600 000 $</option><option value="700 000">700 000 $</option><option value="800 000">800 000 $</option><option value="1 000 000">1 000 000 $</option></select>
     </div>
     <div class="fg"><label class="lbl">Budget maximum</label>
-      <select><option>350 000 $</option><option>400 000 $</option><option>450 000 $</option><option>500 000 $</option><option selected>600 000 $</option><option>700 000 $</option><option>800 000 $</option><option>1 000 000 $</option><option>1 500 000 $</option><option>2 000 000 $+</option></select>
+      <select id="f_budg_max"><option value="350 000">350 000 $</option><option value="400 000">400 000 $</option><option value="450 000">450 000 $</option><option value="500 000">500 000 $</option><option value="600 000" selected>600 000 $</option><option value="700 000">700 000 $</option><option value="800 000">800 000 $</option><option value="1 000 000">1 000 000 $</option><option value="1 500 000">1 500 000 $</option><option value="2 000 000+">2 000 000 $+</option></select>
     </div>
     <div class="fg">
       <label class="lbl">Délai d'achat</label>
@@ -518,6 +518,8 @@ async function submitForm(){
     phone:          phone,
     email:          email,
     type_propriete: getRadio('r_type'),
+    budget_min:     document.getElementById('f_budg_min').value,
+    budget_max:     document.getElementById('f_budg_max').value,
     delai:          getRadio('r_del'),
     preapprobation: getRadio('r_pri'),
     secteurs:       getChecks('r_crt'),
