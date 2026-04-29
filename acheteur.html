@@ -218,12 +218,12 @@ textarea{resize:vertical;min-height:76px}
 .sec-eye::before,.sec-eye::after{content:'';flex:1;height:1px;background:var(--rim2)}
 
 .vid-frame{
-  position:relative;width:100%;padding-bottom:56.25%;
+  position:relative;width:100%;padding-bottom:177.78%;
   border-radius:16px;overflow:hidden;
   border:1px solid var(--rim2);
   box-shadow:0 16px 40px rgba(0,0,0,0.5);
 }
-.vid-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vid-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
 .vid-cover{
   position:absolute;inset:0;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
