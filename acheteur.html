@@ -487,7 +487,7 @@ function playVid(){
   v.play();
 }
 
-const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/UVQRmgjvu0U7JYmCBE0a/webhook-trigger/2a83626a-e9ce-4f52-ba03-6503053e56df";
+const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/UVQRmgjvu0U7JYmCBE0a/webhook-trigger/9ad92962-1f3e-4a60-9875-6243f349d347";
 
 function getRadio(name){
   const el = document.querySelector('input[name="'+name+'"]:checked');
@@ -527,11 +527,9 @@ async function submitForm(){
 
   if(btn){ btn.disabled = true; btn.style.opacity = .7; }
   try {
-    // text/plain keeps it a simple request so no preflight is needed — GHL parses the JSON body regardless.
     await fetch(GHL_WEBHOOK, {
-      method: 'POST',
-      mode:   'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
       body:    payload
     });
   } catch(e){
