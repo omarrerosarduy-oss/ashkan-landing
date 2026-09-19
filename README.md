@@ -16,6 +16,8 @@ Même contenu servi par 3 projets Vercel : `ashkan-landing`, `ashkan-landing-f8d
    tâche « Rappeler » pour Ashkan, échéance 2 h.
 4. Texto d'accusé de réception au lead (numéros nord-américains seulement) et texto
    d'alerte à Ashkan (fiche GHL `cUafne3cRWoCokXJPuy0`, son cellulaire).
+5. Nouvelle opportunité seulement : inscription à la séquence de relance « 01. Suivi des Leads
+   Acheteurs et Vendeurs » (workflow `303a6b4e…`, variable `SUIVI_WORKFLOW_ID` pour changer).
 
 La vidéo (page 2) ne s'affiche et ne se télécharge que si le CRM a accepté la demande.
 
